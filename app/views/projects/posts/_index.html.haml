@@ -4,10 +4,10 @@
 
 - @posts.each do |post|
   .row
-    .large-2.columns
-      = image_tag post.user.profile_pic
+    .small-2.columns
+      = if post.attachment? then image_tag post.attachment_url else image_tag post.user.profile_pic end
       %p= post.user.name
-    .large-10.columns
+    .small-10.columns
       %b= link_to post.title, project_url(@project.id, page: 'show', phase: @show_phase.name, post_id: post.id)
       %small= post.updated_at.strftime("%m/%d/%y at %I:%M%P")
       = if post.attachment? then image_tag 'https://s3.amazonaws.com/mks_learn_app/paperclip.png', width: '12px' end

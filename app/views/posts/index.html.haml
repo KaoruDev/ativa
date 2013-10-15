@@ -15,7 +15,7 @@
     %tr
       %td= post.title
       %td= post.message
-      %td= post.attachment
+      %td= image_tag post.attachment_url if post.attachment?
       %td= post.phase
       %td= post.project
       %td= link_to 'Show', post
