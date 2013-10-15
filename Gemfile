@@ -38,6 +38,8 @@ end
 
 gem "carrierwave"
 gem "rmagick"
+gem "figaro"
+gem "fog", "~> 1.3.1" # This is the version Fog that Carrierwave recommends at the time of this writing.
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
